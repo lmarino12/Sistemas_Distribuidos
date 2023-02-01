@@ -1,12 +1,12 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Cliente;
 
 /**
  *
- * @author LAMG
+ * @author vac_9
  */
 public class Barco {
     
@@ -58,6 +58,10 @@ public class Barco {
     public String toString() {
         return "Barco{" + "direccion=" + direccion + ", tipo=" + tipo + ", size=" + size + '}';
     }
+    
+    
+    
+    
     
     
 }

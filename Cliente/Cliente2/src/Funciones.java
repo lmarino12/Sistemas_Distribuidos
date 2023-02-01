@@ -1,15 +1,16 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Cliente;
 
-import java.util.HashSet;
-import java.util.Random;
 /**
  *
- * @author LAMG
+ * @author vac_9
  */
+import java.util.HashSet;
+import java.util.Random;
+
 public class Funciones {
     
     public static boolean verificacion(Barco[][] mb, int f1, int c1, int barco_size, int vh){
@@ -102,6 +103,45 @@ public class Funciones {
     
     }
     
+    public static String generarAtaques(int[][] me){
+        Random rand = new Random();
+        
+        HashSet<String> coor = new HashSet<String>();
+        
+        String the_coors = "";
+        
+        for (int i = 0; i < 5; i++) {
+            boolean flag1 = true;
+            while(flag1){
+                int fila = rand.nextInt(6); //Posicion de indices
+                int columna = rand.nextInt(7);  //Posicion de indices
+                if(me[fila][columna]==0){
+                    String coorfc = fila + "," + columna;
+                    if(!coor.contains(coorfc)){
+                        coor.add(coorfc);
+                        the_coors = the_coors + coorfc;
+                        flag1=false;
+                    }
+                }
+            }
+            if(i!=4){
+                the_coors = the_coors + ";";
+            }
+        }
+        
+        
+     
+        
+        
+        
+        
+        
+        return the_coors;
+    }
+    
+    
+    
+    
     public static void mostrarMatrices(Barco[][] m, int[][] m2 ){
         //Forma de mostrar la matriz por consola..... Esto se lo pueden reemplazar luego con un entorno grafico
         
@@ -192,6 +232,7 @@ public class Funciones {
                             
         }
     }
+    
     
     
 }
